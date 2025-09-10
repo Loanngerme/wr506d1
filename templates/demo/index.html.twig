@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+{{ "now"|date_modify("+0 days")|format_datetime(date_format='long', time_format='short', locale='fr') }}
+{% endblock %}
