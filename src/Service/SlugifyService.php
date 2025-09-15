@@ -4,20 +4,17 @@ namespace App\Service;
 
 class SlugifyService
 {
-    public function generate(string $text): string
+    public function generate(string $slug): string
     {
-        // Supprimer les accents
-        $text = iconv('UTF-8', 'ASCII//TRANSLIT', $text);
+        $slug = iconv('UTF-8', 'ASCII//TRANSLIT', $slug);
 
-        // Mettre en minuscules
-        $text = strtolower($text);
+        $slug = strtolower($slug);
 
-        // Remplacer tout ce qui n’est pas lettre/chiffre par un tiret
-        $text = preg_replace('/[^a-z0-9]+/', '-', $text);
+        $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
 
-        // Supprimer les tirets en début/fin
-        $text = trim($text, '-');
+        
+        $slug = trim($slug, '-');
 
-        return $text;
+        return $slug;
     }
 }
