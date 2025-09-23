@@ -18,6 +18,9 @@ class Category
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[ORM\Column(type: 'datetime_immutable')]
+    private ?\DateTimeImmutable $createdAt = null;
+
     /**
      * @var Collection<int, Movie>
      */
@@ -27,6 +30,7 @@ class Category
     public function __construct()
     {
         $this->movies = new ArrayCollection();
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
@@ -42,6 +46,18 @@ class Category
     public function setName(string $name): static
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
