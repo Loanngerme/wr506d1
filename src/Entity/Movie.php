@@ -143,7 +143,7 @@ class Movie
     {
         if (!$this->acteurs->contains($acteur)) {
             $this->acteurs->add($acteur);
-            $acteur->addMouvy($this);
+            $acteur->addMovie($this);
         }
 
         return $this;
@@ -152,7 +152,7 @@ class Movie
     public function removeActeur(Acteur $acteur): static
     {
         if ($this->acteurs->removeElement($acteur)) {
-            $acteur->removeMouvy($this);
+            $acteur->removeMovie($this);
         }
 
         return $this;
