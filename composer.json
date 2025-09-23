@@ -7,8 +7,9 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "api-platform/doctrine-orm": "^4.2",
-        "api-platform/symfony": "^4.2",
+        "api-platform/doctrine-orm": "^4.1",
+        "api-platform/graphql": "^4.1",
+        "api-platform/symfony": "^4.1",
         "cocur/slugify": "^4.6",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.16",
@@ -51,6 +52,7 @@
         "twig/intl-extra": "^3.21",
         "twig/twig": "^2.12|^3.0",
         "xylis/faker-cinema-providers": "^2.0"
+        "webonyx/graphql-php": "^15.24"
     },
     "config": {
         "allow-plugins": {

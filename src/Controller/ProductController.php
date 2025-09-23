@@ -1,6 +1,6 @@
 <?php
-namespace App\Controller;
 
+namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,7 +16,7 @@ class ProductController extends AbstractController
     {
         $slug = $slugifyService->generate("Jean d'été");
         return $this->render('product/index.html.twig', [
-            'listProducts' => 'Liste des produits',
+            'title' => 'Liste des produits',
             'slug' => $slug,
         ]);
     }
@@ -25,7 +25,7 @@ class ProductController extends AbstractController
     public function viewProduct(int $id): Response
     {
 
-        return $this->render('product/list.html.twig', [
+        return $this->render('product/view.html.twig', [
             'product' => $id,
         ]);
     }
