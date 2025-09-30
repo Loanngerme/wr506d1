@@ -16,7 +16,7 @@ use ApiPlatform\Doctrine\ORM\Filter\DateFilter;
 use ApiPlatform\Doctrine\Orm\Filter\ExistsFilter;
 
 #[ORM\Entity(repositoryClass: ActeurRepository::class)]
-#[ApiResource]
+#[ApiResource()]
 class Acteur
 {
     #[ORM\Id]
